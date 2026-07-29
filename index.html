@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEGAR BANGKIT NUGROHO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="close-menu" id="closeMenu">CLOSE &times;</button>
+        <div class="menu-content">
+            <div class="menu-left d-none d-lg-block">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600" alt="Art">
+            </div>
+            <div class="menu-right">
+                <nav>
+                    <a href="#about" class="menu-link"><span>01</span> ABOUT</a>
+                    <a href="#experience" class="menu-link"><span>02</span> EXPERIENCE</a>
+                    <a href="#education" class="menu-link"><span>03</span> EDUCATION</a>
+                    <a href="#certificates" class="menu-link"><span>04</span> CERTIFICATES</a>
+                    <a href="#portfolio" class="menu-link"><span>05</span> PROJECTS</a>
+                    <a href="#contact" class="menu-link"><span>06</span> CONTACTS</a>
+                    
+                    <div class="mt-4 pt-3 border-top border-dark">
+                        <button class="menu-link admin-trigger" id="sidebarLoginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <span>&rarr;</span> ADMIN LOGIN
+                        </button>
+                        <button class="menu-link admin-trigger d-none" id="sidebarLogoutBtn" onclick="logout()">
+                            <span>&times;</span> LOGOUT SYSTEM
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="viewport-frame">
+        <header class="notch-header">
+            <div class="notch">TEGAR BANGKIT NUGROHO</div>
+            <button class="btn-add-fast d-none" id="fastAddBtn" data-bs-toggle="modal" data-bs-target="#crudModal">+ ADD PROJECT</button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+                <span class="icon-sun">&#9728;</span>
+                <span class="icon-moon">&#9789;</span>
+            </button>
+            <button class="hamburger" id="openMenu"><span></span><span></span></button>
+        </header>
+
+        <section class="hero-section">
+            <div class="hero-center" data-aos="zoom-out">
+                <span class="eyebrow">DISCOVER THE WORKS OF</span>
+                <h1>TEGAR<br>BANGKIT<br>PORTFOLIO</h1>
+            </div>
+            <div class="scroll-down-notch">SCROLL DOWN</div>
+        </section>
+
+        <section class="content-section" id="about">
+            <div class="section-divider-notch"><div class="notch-tag">MY STORY</div></div>
+            <div class="row align-items-center mt-5">
+                <div class="col-md-5" data-aos="fade-right">
+                    <div class="profile-frame">
+                        <img src="images/tegar.jpeg" alt="Tegar" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-7 ps-md-5" data-aos="fade-left">
+                    <p class="story-large">Saya lulusan Ilmu Komputer yang punya ketertarikan tinggi di dunia pemrograman web, pengolahan data, dan jaringan. Terbiasa membangun aplikasi web, mengolah data untuk kebutuhan analisis, sampai mengurus konfigurasi jaringan komputer. Selain urusan teknis, saya juga menikmati proses kreatif seperti desain grafis untuk mendukung tampilan visual aplikasi yang saya buat. Saya tipe orang yang senang belajar hal baru, terbiasa menyelesaikan masalah secara terstruktur, dan siap berkembang di dunia kerja.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Project & Team Collaboration</span>
+                        <span class="skill-tag">Network & System Administration</span>
+                        <span class="skill-tag">Data Science & Big Data Analytics</span>
+                        <span class="skill-tag">Digital Design & Creative Media</span>
+                        <span class="skill-tag">Office & Productivity Suite</span>
+                        <span class="skill-tag">Software Engineering & Web Development</span>
+                        <span class="skill-tag">Problem Solving & Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="experience">
+            <div class="section-divider-notch"><div class="notch-tag">EXPERIENCE</div></div>
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto" data-aos="fade-up">
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Agu 2025 – Sep 2025</div>
+                        <div>
+                            <p class="timeline-role"><span class="timeline-dot"></span>IT & Data Management Intern (Praktik Kerja Lapang)</p>
+                            <p class="timeline-org">Dinas Koperasi, Usaha Kecil dan Menengah, Perdagangan dan Perindustrian Kota Bogor — Kota Bogor, Jawa Barat</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jan 2024 – Feb 2024</div>
+                        <div>
+                            <p class="timeline-role"><span class="timeline-dot"></span>Kelompok Penyelenggara Pemungutan Suara (KPPS)</p>
+                            <p class="timeline-org">Komisi Pemilihan Umum — Kab. Bogor, Jawa Barat</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Feb 2023 – Mar 2023</div>
+                        <div>
+                            <p class="timeline-role"><span class="timeline-dot"></span>Petugas Pemutakhiran Data Pemilih</p>
+                            <p class="timeline-org">Komisi Pemilihan Umum — Kab. Bogor, Jawa Barat</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="education">
+            <div class="section-divider-notch"><div class="notch-tag">EDUCATION</div></div>
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto" data-aos="fade-up">
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 – 2026</div>
+                        <div>
+                            <p class="timeline-role"><span class="timeline-dot"></span>S1 — Ilmu Komputer</p>
+                            <p class="timeline-org">Universitas Pakuan — Kota Bogor, Jawa Barat</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 – 2022</div>
+                        <div>
+                            <p class="timeline-role"><span class="timeline-dot"></span>SMK — Teknik Komputer dan Jaringan</p>
+                            <p class="timeline-org">SMK BM Al Ikhlas — Kab. Bogor, Jawa Barat</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016 – 2019</div>
+                        <div>
+                            <p class="timeline-role"><span class="timeline-dot"></span>SMP atau Sederajat</p>
+                            <p class="timeline-org">SMP Negeri 1 Megamendung — Kab. Bogor, Jawa Barat</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="certificates">
+            <div class="section-divider-notch"><div class="notch-tag">CERTIFICATES</div></div>
+            <div class="text-end mb-3 d-none admin-only">
+                <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#certModal">+ ADD CERTIFICATE</button>
+            </div>
+            <div class="row g-4 mt-2 justify-content-center" id="cert-container"></div>
+
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto" data-aos="fade-up">
+                    <p class="small-label mb-4">SERTIFIKASI & PELATIHAN</p>
+
+                    <div class="cert-list-item">
+                        <div>
+                            <p class="cert-list-name">Intermediate Junior Graphic Designer — Nasional</p>
+                            <p class="cert-list-org">Pusat Pengembangan Talenta Digital, BPSDM Kementerian Komunikasi dan Digital (Komdigi)</p>
+                        </div>
+                        <div class="cert-list-date">Juli 2026</div>
+                    </div>
+
+                    <div class="cert-list-item">
+                        <div>
+                            <p class="cert-list-name">Next Generation Cisco IPv6</p>
+                            <p class="cert-list-org">Hendevane Training Partner (HTP)</p>
+                        </div>
+                        <div class="cert-list-date">Juni 2026</div>
+                    </div>
+
+                    <div class="cert-list-item">
+                        <div>
+                            <p class="cert-list-name">Belajar Penerapan Data Science dengan Microsoft Fabric</p>
+                            <p class="cert-list-org">Dicoding Indonesia</p>
+                        </div>
+                        <div class="cert-list-date">Mei 2026</div>
+                    </div>
+
+                    <div class="cert-list-item">
+                        <div>
+                            <p class="cert-list-name">Memulai Pemrograman dengan Haskell</p>
+                            <p class="cert-list-org">Dicoding Indonesia (PT Presentasi Edukasi Nusantara)</p>
+                        </div>
+                        <div class="cert-list-date">Mei 2026</div>
+                    </div>
+
+                    <div class="cert-list-item">
+                        <div>
+                            <p class="cert-list-name">Intermediate Junior Graphic Designer — Nasional (Pelatihan)</p>
+                            <p class="cert-list-org">Digital Talent Academy (DTA) — Digital Talent Scholarship (DTS), Pusat Pengembangan Talenta Digital, BPSDM Komdigi RI</p>
+                        </div>
+                        <div class="cert-list-date">Feb 2026 – Des 2026</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="portfolio">
+            <div class="section-divider-notch"><div class="notch-tag">SELECTED WORKS</div></div>
+            <div class="row g-4 mt-5" id="projects-container"></div>
+        </section>
+
+        <section class="content-section" id="contact">
+            <div class="section-divider-notch"><div class="notch-tag">CONTACT</div></div>
+            <h2 class="display-huge mt-5">GET IN TOUCH</h2>
+            <p class="contact-info-line">
+                KP Lebak Nangka RT.001/005, Gunung Geulis, Sukaraja, Kab. Bogor<br>
+                <a href="mailto:tegarbangkit38@gmail.com">tegarbangkit38@gmail.com</a> &nbsp;|&nbsp;
+                <a href="tel:085782852029">085782852029</a>
+            </p>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <p class="small-label">FOLLOW +</p>
+                    <ul class="social-list">
+                        <li><a href="https://www.linkedin.com/in/tegarbangkitnugroho/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://github.com/Tegarbangkit21" target="_blank" rel="noopener">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <form action="https://formspree.io/f/xdaewrkq" method="POST" class="contact-form row g-4">
+                        <div class="col-md-6"><input type="text" name="name" class="form-custom" placeholder="YOUR NAME" required></div>
+                        <div class="col-md-6"><input type="email" name="email" class="form-custom" placeholder="YOUR EMAIL" required></div>
+                        <div class="col-md-12"><input type="text" name="subject" class="form-custom" placeholder="SUBJECT"></div>
+                        <div class="col-12"><textarea name="message" class="form-custom" rows="1" placeholder="MESSAGE" required></textarea></div>
+                        <div class="col-12 text-end mt-4"><button type="submit" class="btn-send-white">SEND MESSAGE</button></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content bg-black p-4 border-dark text-white"><h5>ADMIN LOGIN</h5><input type="email" id="user" class="form-control mb-2 bg-dark text-white border-0" placeholder="Email Admin"><input type="password" id="pass" class="form-control mb-3 bg-dark text-white border-0" placeholder="Password"><button class="btn btn-light w-100 fw-bold" onclick="login()">ENTER</button></div></div></div>
+
+    <div class="modal fade" id="crudModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content bg-black border-dark text-white"><div class="modal-body p-4">
+        <h5 id="crudModalTitle">ADD PROJECT</h5>
+        <div class="mb-2"><label class="small text-muted">TITLE</label><input type="text" id="pTitle" class="form-control bg-dark text-white border-0"></div>
+        <div class="mb-2"><label class="small text-muted">CATEGORY</label><input type="text" id="pCat" class="form-control bg-dark text-white border-0"></div>
+        <div class="mb-2"><label class="small text-muted">IMAGE URL</label><input type="text" id="pImg" class="form-control bg-dark text-white border-0"></div>
+        <div class="mb-3"><label class="small text-muted">DESCRIPTION</label><textarea id="pDesc" class="form-control bg-dark text-white border-0"></textarea></div>
+        <button class="btn btn-light w-100" id="crudSaveBtn" onclick="saveProject()">SAVE TO CLOUD</button>
+    </div></div></div></div>
+
+    <div class="modal fade" id="certModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content bg-black border-dark text-white"><div class="modal-body p-4">
+        <h5 id="certModalTitle">ADD CERTIFICATE</h5>
+        <div class="mb-2"><label class="small text-muted">CERTIFICATE NAME</label><input type="text" id="certTitle" class="form-control bg-dark text-white border-0"></div>
+        <div class="mb-3"><label class="small text-muted">IMAGE URL</label><input type="text" id="certImg" class="form-control bg-dark text-white border-0"></div>
+        <button class="btn btn-light w-100" id="certSaveBtn" onclick="saveCertificate()">SAVE TO CLOUD</button>
+    </div></div></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyAATLRK1xs4WkKg0njH4CXk66KuvlgUYYo",
+          authDomain: "portfolio-tegar.firebaseapp.com",
+          projectId: "portfolio-tegar",
+          storageBucket: "portfolio-tegar.firebasestorage.app",
+          messagingSenderId: "1067663665490",
+          appId: "1:1067663665490:web:edf44fddd2671edb53b28b",
+          measurementId: "G-6FRBKNCSH8"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        window.auth = getAuth(app);
+        window.db = getFirestore(app);
+        window.api = { signInWithEmailAndPassword, onAuthStateChanged, signOut, collection, addDoc, updateDoc, deleteDoc, doc, onSnapshot, query, orderBy };
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
