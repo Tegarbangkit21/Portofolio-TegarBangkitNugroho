@@ -139,7 +139,7 @@ img[src*="flaticon"] {
 :root[data-theme="light"] .theme-toggle .icon-moon { display: inline; }
 
 /* HERO */
-.hero-section { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.hero-section { height: 80vh; height: 80dvh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .hero-center h1 { font-size: clamp(2.5rem, 8vw, 6rem); font-weight: 900; line-height: 0.85; letter-spacing: -5px; background: var(--gradient-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .eyebrow { font-size: 10px; letter-spacing: 5px; color: var(--accent); margin-bottom: 20px; display: block; font-weight: 700; }
 .scroll-down-notch { border: 1px solid var(--border); border-bottom: none; padding: 10px 30px; border-radius: 15px 15px 0 0; font-size: 9px; position: absolute; bottom: 0; color: var(--muted); }
@@ -402,6 +402,22 @@ img[src*="flaticon"] {
     .cert-list-item {
         flex-direction: column !important;
         gap: 4px !important;
+    }
+
+    /* 8. Tombol Toggle Mode dipindah ke kiri biar ga nabrak hamburger/notch */
+    .theme-toggle {
+        left: 0;
+        right: auto;
+        top: 25px;
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+
+    /* Kalau tombol admin "+ ADD PROJECT" lagi muncul (mode login),
+       geser ke bawah dikit biar ga numpuk sama theme-toggle */
+    .btn-add-fast {
+        top: 65px;
     }
 }
 
